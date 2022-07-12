@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <style>
+        input {
+            width: 44%;
+        }
+         /* body{
+           
+         } */
+        #noteAll {
+            border: 2px solid black;
+            inline-size: 50%;
+            text-align: center;
+            margin-left: 30%;
+            border-radius: 3%;
+            background-color: bisque;
+            background-image: url("notes(bg).jpg");
+        }
+
+        #btn {
+            width: 50%;
+            
+        }
+        #butn{
+            margin: 40%;
+        }
+        #select{
+            color: brown;
+            border-radius: 3px;
+            border-width: 23px;
+            margin-left: 40%;
+        }
+        #search{
+            width: 25%;
+            margin-left: 40%;
+        }
+       #head{
+        border: 2px solid black;
+        width: 25%;
+        box-sizing: inherit;
+        background-color: bisque;
+        margin-left: 40%;
+        }
+        #smg{
+            font-variant-ligatures: additional-ligatures;
+            color: brown;
+        }
+
+       
+    </style>
+</head>
+<!-- <script src="findex.js"></script> -->
+
+<body>
+    <div class="container">
+        <div id="noteAll">
+           
+            <input type="text" placeholder="Notes Title" id="nTitle" required><br> <br>
+            <!-- <input type="date" id="date"> -->
+            <br> 
+            <textarea id="textArea" rows="6" placeholder="Description" required></textarea>
+            <br> <br>
+            <h2 id="smg"></h2>
+            <button onclick="Add()" id="btn">Add </button>
+            <br> <br>
+            
+        </div>
+    </div>
+    <span>
+        <br><input type="search" style="border:2px solid blue"placeholder="Search By Title..." id="search" onkeyup="search()">
+        <br><br>
+         <select name="" id="select" onchange="sort()">
+                <option value="date">Sort By</option>
+                <option value="date">By Date</option>
+                <option value="title">By Title</option>
+                <option value="name">By Notes</option>
+            </select><br><br>
+        </span>
+            <h1 id="head">Here Is Your Text</h1><br>
+
+        
+        <section>
+            <hr><hr>
+           
+            <div id="showText"></div>
+
+        </section>
+   
+    <script src="main.js"></script>
+</body>
+
+</html>
